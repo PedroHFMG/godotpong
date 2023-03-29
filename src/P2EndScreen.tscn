@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Kosugi-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/anotherfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://src/P1EndScreen.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=6]
+size = 90
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=4]
+default_font = SubResource( 6 )
+
+[sub_resource type="Theme" id=5]
+default_font = ExtResource( 2 )
+
+[node name="EndScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 387 )
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="WhoWon" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -180.0
+margin_top = 118.0
+margin_right = 180.0
+margin_bottom = 303.0
+theme = SubResource( 4 )
+text = "Player 2
+Won"
+align = 1
+valign = 1
+
+[node name="ContainerMenu" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -125.5
+margin_top = -20.5
+margin_right = 125.5
+margin_bottom = 248.5
+theme = SubResource( 5 )
+
+[node name="BackMenu" type="Button" parent="ContainerMenu"]
+margin_right = 251.0
+margin_bottom = 269.0
+size_flags_vertical = 3
+text = "Back"
+
+[connection signal="pressed" from="ContainerMenu/BackMenu" to="." method="_on_BackMenu_pressed"]

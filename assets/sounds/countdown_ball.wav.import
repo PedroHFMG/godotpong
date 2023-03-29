@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/countdown_ball.wav-7428916e50bc43ce98737e5acc843c2f.sample"
+
+[deps]
+
+source_file="res://assets/sounds/countdown_ball.wav"
+dest_files=[ "res://.import/countdown_ball.wav-7428916e50bc43ce98737e5acc843c2f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
